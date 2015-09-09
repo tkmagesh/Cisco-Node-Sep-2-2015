@@ -15,21 +15,26 @@ Usage:
     console.log(calc.getResult()) => 15
 */
 
-var result = 0;
+
 module.exports = {
-    add : function(x){
-        result += x;
-    },
-    subtract : function(x){
-        result -= x;
-    },
-    multiply : function(x){
-        result *= x;
-    },
-    divide : function(x){
-        result /= x;
-    },
-    getResult : function(){
-        return result;
+    create : function(){
+        var result = 0;
+        return {
+            add : function(x){
+                result += x;
+            },
+            subtract : function(x){
+                result -= x;
+            },
+            multiply : function(x){
+                result *= x;
+            },
+            divide : function(x){
+                result /= x;
+            },
+            getResult : function(){
+                return result;
+            }
+        }
     }
 };
