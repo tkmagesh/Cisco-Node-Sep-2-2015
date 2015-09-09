@@ -4,10 +4,10 @@ if (process.argv.length < 3){
     return;
 }
 var filename = process.argv[2];
-/*if (!fs.existsSync(filename)){
+if (!fs.existsSync(filename)){
     console.log('file not found');
     return;
-}*/
+}
 fs.readFile(filename, {encoding : 'utf8'} , function(err, fileContents){
     if (err){
         console.log('something went wrong - ', err);

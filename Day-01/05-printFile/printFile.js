@@ -1,4 +1,4 @@
-//var fs = require('fs');
+var fs = require('fs');
 if (process.argv.length < 3){
     console.log('File name is required');
     return;
