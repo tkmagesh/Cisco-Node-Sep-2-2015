@@ -28,4 +28,14 @@ router.post('/new', function(req, res, nex){
     bugs.push(newBug);
     res.redirect('/bugs');
 });
+
+router.get('/toggle/:id', function(req, res, next){
+    var bugId = parseInt(req.params.id, 10);
+    var bug = bugs.filter(function(b){
+        return b.id === bugId;
+    })[0];
+    if (bug) bug.isClosed = !bug.isClosed;
+    res.redirect('/bugs');
+
+})
 module.exports = router;
