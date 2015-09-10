@@ -1,0 +1,9 @@
+Create a bug
+List the bugs
+Toggle the completion status of the bugs
+Remove closed bugs
+
+get  /bugs -> html for accepting data
+post /bugs -> process the data for the new bug and redirect the user to the list screen
+get  /bugs/toggle/[id] -> toggle the completion status of the bug with id [id] and redirect the user to the list screen
+post /bugs/removeClosed -> remove the closed bugs and redirect the user to the list screen
